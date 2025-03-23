@@ -1,0 +1,23 @@
+//Output of when code is ran 
+
+For FCFS
+Gantt Chart for FCFS: | P1 | P2 | P3 | P4 |
+
+PID  WT  TAT
+1    0   6
+2    3   7
+3    5   12
+4    9   12
+Average WT: 4.00
+Average TAT: 9.00
+
+For SJF:
+Gantt Chart for SJF: | P1 | P2 | P4 | P3 |
+
+PID  WT  TAT
+1    0   6
+2    4   8
+4    3   6
+3    9   16
+Average WT: 4.00
+Average TAT: 9.00

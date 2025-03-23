@@ -91,7 +91,7 @@ void SJF(Process processes[], int n) {
 
         
         if (readyCount > 0) {
-            // Sort the readyQueue by burst time (SJF logic)
+           
             int minBurstIndex = 0;
             for (int i = 1; i < readyCount; i++) {
                 if (readyQueue[i].burstTime < readyQueue[minBurstIndex].burstTime) {
@@ -102,12 +102,12 @@ void SJF(Process processes[], int n) {
             Process p = readyQueue[minBurstIndex];
             printf("| P%d ", p.pid);
 
-            // Update waiting and turnaround times
+            // Updating the waiting and turnaround times
             p.waitingTime = currentTime - p.arrivalTime;
             p.turnaroundTime = p.waitingTime + p.burstTime;
             currentTime += p.burstTime;
 
-            processes[p.pid - 1] = p;  // Update the original process 
+            processes[p.pid - 1] = p;  // Updating the original process 
             completed++;
 
             
